@@ -1,0 +1,62 @@
+{
+   "customer" : {
+      "lastname" : "Testepost",
+      "firstname" : "api",
+      "email" : "testeapi2@teste.com",
+      "store_id": 1,
+      "website_id": 1,
+      "gender": 0,
+      "taxvat": "80.225.098/0001-14",
+      "addresses" : [
+         {
+           "region": {
+               "region_code": "MG",
+               "region": "Minas Gerais"
+           },
+           "countryId" : "BR",
+           "postcode" : "3016000",
+           "city" : "Belo Horizonte",
+           "street": [
+               "Rua Adolfo Pereira",
+               "333",
+               "Anchieta",
+               "44"
+           ],
+            "defaultBilling" : true,
+            "defaultShipping" : true,
+            "firstname" : "testeput",
+            "lastname" : "Api",
+            "company": "testeapi",
+            "vat_id": "80225098000114",
+            "telephone" : "31-98555-0000"
+         }
+      ],
+      "custom_attributes": [
+                {
+                    "attribute_code": "telefone_principal",
+                    "value": "31 988555555"
+                },
+                {
+                    "attribute_code": "nome_fantasia",
+                    "value": "testeapi"
+                },
+                {
+                    "attribute_code": "cidade_cliente",
+                    "value": "BH"
+                },
+                {
+                    "attribute_code": "risk_level",
+                    "value": "1"
+                },
+                {
+                    "attribute_code": "estado_cliente",
+                    "value": "5492"
+                },
+                {
+                    "attribute_code": "is_approved",
+                    "value": "approved"
+                }
+            ]
+        },
+        "password" : "teste123*"
+}
