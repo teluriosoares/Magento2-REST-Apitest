@@ -1,0 +1,41 @@
+{
+  "addressInformation": {
+    "shipping_address": {
+      "region": "São Paulo",
+    "region_id": 508,
+    "region_code": "SP",
+    "country_id": "BR",
+    "street": [
+        "Avenida General Olímpio da Silveira",
+        "150",
+        "mang"
+    ],
+    "postcode": "01150000",
+    "city": "São Paulo",
+    "firstname": "telurio",
+    "lastname": "soares",
+    "email": "telurio@jn2.com.br",
+    "telephone": "(31) 99854-6546"
+    },
+    "billing_address": {
+    "region": "São Paulo",
+    "region_id": 508,
+    "region_code": "SP",
+    "country_id": "BR",
+    "street": [
+        "Avenida General Olímpio da Silveira",
+        "150",
+        "mang"
+    ],
+    "postcode": "01150000",
+    "city": "São Paulo",
+    "firstname": "telurio",
+    "lastname": "soares",
+    "email": "telurio@jn2.com.br",
+    "telephone": "(31) 99854-6546"
+    },
+    "shipping_carrier_code": "flatrate",
+    "shipping_method_code": "flatrate"
+  }
+
+}

@@ -1,0 +1,23 @@
+{
+  "cart_id": 35,
+  "paymentMethod": {
+    "method": "checkmo"
+  },
+  "billing_address": {
+    "email": "telurio@jn2.com.br",
+    "region": "São Paulo",
+    "region_id": 508,
+    "region_code": "SP",
+    "country_id": "BR",
+    "street": [
+        "Avenida General Olímpio da Silveira",
+        "150",
+        "mang"
+    ],
+    "postcode": "01150000",
+    "city": "São Paulo",
+    "firstname": "telurio",
+    "lastname": "soares"
+  }
+
+}
