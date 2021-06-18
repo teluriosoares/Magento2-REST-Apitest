@@ -1,0 +1,42 @@
+Token - https://linkdaloja.com/rest/all/V1/integration/admin/token
+1.1 - Create Attribute POST- https://linkdaloja.com/rest/all/rest/V1/products/attributes
+1.2 - Create Options Attribute POST- https://linkdaloja.com/rest/all/V1/products/attributes/color/options
+1.3 - Search All Attributes GET- https://linkdaloja.com/rest/all/V1/products/attributes?searchCriteria[pageSize]=200
+1.4 - Search All Options Attributes GET- https://linkdaloja.com/rest/all/V1/products/attributes/color/options
+
+2.1 - Create Category POST- https://linkdaloja.com/rest/all/V1/categories
+2.2 - Search All Categories GET- https://linkdaloja.com/rest/all/V1/categories/list?searchCriteria[pageSize]=200
+
+3-1-1 - Create Product POST- Configurable (RN -P01) - https://linkdaloja.com/rest/default/V1/products
+3-1-2 - Create Product POST- Simple (RN -P02) - https://linkdaloja.com/rest/default/V1/products
+3-1-3 - Set Attributes in Configurable POST- (RN -P03) - https://linkdaloja.com/rest/default/V1/configurable-products/TESTEAPI-Config/options
+3-1-4 - Associate products POST- (RN -P04) - https://linkdaloja.com/rest/default/V1/configurable-products/TESTEAPI-Config/child
+3-3 - Create Product Image POST- https://linkdaloja.com/rest/default/V1/products
+3-4 - Search Products GET- https://linkdaloja.com/rest/V1/products?searchCriteria[pageSize]=10000
+3-5 - Search all Groups Products GET- https://linkdaloja.com/rest/all/V1/products/attribute-sets/sets/list?searchCriteria[pageSize]=100
+3-6-1 - Create Product POST- GROUPED (RN -P01) - https://linkdaloja.com/rest/default/V1/products
+3-6-2 - Associate Product POST- GROUPED (RN -P02) - https://linkdaloja.com/rest/default/V1/products/TESTEAPI-GROUPED/links
+
+4.1 - Create Customers POST- https://linkdaloja.com/rest/all/V1/customers/
+4-2 - Search All Customers GET- https://linkdaloja.com/rest/V1/customers/search?searchCriteria[sortOrders][0][field]=email&searchCriteria[sortOrders][0][direction]=asc
+
+5.1 - Update stock PUT- https://linkdaloja.com/rest/default/V1/products/testeimage/stockItems/1
+5.2 - Update Product PUT- https://linkdaloja.com/rest/default/V1/products/teste-basic-full
+5.3 - Enviando Imagem PUT- https://linkdaloja.com/rest/default/V1/products/Teste-simples-02
+5.4 - Alterar Cliente PUT- https://linkdaloja.com/rest/all/V1/customers/71
+5.5 - Alterar Password PUT- https://linkdaloja.com/rest/V1/customers/me/password?customerId=83
+
+6-1.1 - Search All Orders GET- https://linkdaloja.com/rest/V1/orders?searchCriteria=all
+6-1.2 - Search One Order GET- https://linkdaloja.com/rest/V1/orders/000000013
+6.1.3 - Search Status Order GET - https://linkdaloja.com/rest/V1/orders?searchCriteria[filter_groups][0][filters][0][field]=status&searchCriteria[filter_groups][0][filters][0][value]=processing&searchCriteria[sortOrders][0][field]=increment_id&fields=items[increment_id,entity_id,status]
+6.1.3 - Search order date GET - {{baseUrl}}/V1/orders/?searchCriteria[filter_groups][0][filters][0][field]=created_at&searchCriteria[filter_groups][0][filters][0][value]=2020-01-24%2021:00:00&searchCriteria[filter_groups][0][filters][0][condition_type]=gt
+6-2 - Add comment in Orders POST- https://linkdaloja.com/rest/V1/invoices/comments
+6.3 - Create Invoice - {{baseUrl}}/rest/V1/order/20/invoice
+6.4 - Create Ship - {{baseUrl}}/V1/order/20/ship
+
+7.1 - New order QUOTE POST - {{baseUrl}}/V1/customers/6/carts
+7.2 - Save Product QUOTE POST - {{baseUrl}}/V1/carts/mine/items
+7.3 - Get client GET - {{baseUrl}}/V1/customers/6/shippingAddress
+7.4 - Save shippment QUOTE POST - {{baseUrl}}/V1/carts/35/estimate-shipping-methods
+7.5 - Save method shippment QUOTE POST - {{baseUrl}}/V1/carts/35/shipping-information
+7.6 - Save payment order POST - {{baseUrl}}/V1/carts/mine/payment-information

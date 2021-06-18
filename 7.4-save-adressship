@@ -1,0 +1,22 @@
+{
+  "address": {
+    "region": "São Paulo",
+    "region_id": 508,
+    "region_code": "SP",
+    "country_id": "BR",
+    "street": [
+        "Avenida General Olímpio da Silveira",
+        "150",
+        "mang"
+    ],
+    "postcode": "01150000",
+    "city": "São Paulo",
+    "firstname": "telurio",
+    "lastname": "soares",
+    "customer_id": 6,
+    "email": "telurio@jn2.com.br",
+    "telephone": "(31) 99854-6546",
+    "same_as_billing": 1
+  }
+
+}
