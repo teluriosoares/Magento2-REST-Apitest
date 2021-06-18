@@ -1,8 +1,8 @@
 <?php
 
-const STORE_URL = "https://lumistore.boostcommerce.com.br/";
-const USER = "jn2";
-const PASSWORD = "43pmxJocL59z";
+const STORE_URL = "https://sualoja.com.br/";
+const USER = "user";
+const PASSWORD = "password";
 
 function get_token() {
   // Connect
@@ -12,7 +12,7 @@ function get_token() {
   curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($userData));
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Content-Length: " . strlen(json_encode($userData))));
-  
+
   $token = curl_exec($ch);
   return $token;
 }
@@ -27,7 +27,7 @@ function update_config($path, $value) {
         $params = json_encode($array);
 
         $token = get_token();
-        
+
       // PUT
         $curl = curl_init();
         curl_setopt_array($curl, array(

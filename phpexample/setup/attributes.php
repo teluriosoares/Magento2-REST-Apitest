@@ -1,8 +1,8 @@
 <?php
 
-const STORE_URL = "https://livrariabrooklin.m2.jn2.store/";
-const USER = "jn2";
-const PASSWORD = "8SlN3AJ_oX";
+const STORE_URL = "https://sualoja.com.br/";
+const USER = "user";
+const PASSWORD = "password";
 
 function get_token() {
     // Connect
@@ -12,7 +12,7 @@ function get_token() {
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($userData));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Content-Length: " . strlen(json_encode($userData))));
-    
+
     $token = curl_exec($ch);
     return $token;
   }
@@ -23,12 +23,12 @@ function get_attribute_json($std) {
     ];
 
     return json_encode($array);
-    
+
   }
 
   function api_request($api, $method, $params = []) {
     $token = get_token();
-    
+
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => STORE_URL.'rest/default/'.$api,
@@ -47,7 +47,7 @@ function get_attribute_json($std) {
     ));
     $response = curl_exec($curl);
     $err = curl_error($curl);
-  
+
     return $response;
 }
 
@@ -69,7 +69,7 @@ function execute_csv($filename, $json, $method) {
     if (($handle = fopen($filename, "r")) !== FALSE) {
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $row++;
-            
+
             $std = get_attribute_frontend_input($data[0]);
             $std->default_frontend_label = $data[1];
             $std->frontend_labels = ["label" => $data[1], "store_id" => 0];

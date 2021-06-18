@@ -1,8 +1,8 @@
 <?php
 
-const STORE_URL = "https://beta1.boostcommerce.com.br/";
-const USER = "jn2";
-const PASSWORD = "P4ssw0rd";
+const STORE_URL = "https://sualoja.com.br/";
+const USER = "user";
+const PASSWORD = "password";
 
 function get_token() {
   // Connect
@@ -12,7 +12,7 @@ function get_token() {
   curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($userData));
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Content-Length: " . strlen(json_encode($userData))));
-  
+
   $token = curl_exec($ch);
   return $token;
 }
@@ -20,7 +20,7 @@ function get_token() {
 function post_request($api, $method, $params) {
 
         $token = get_token();
-        
+
       // PUT
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -40,7 +40,7 @@ function post_request($api, $method, $params) {
         ));
         $response = curl_exec($curl);
         $err = curl_error($curl);
-      
+
         return $response;
 }
 
@@ -67,10 +67,10 @@ function product_json ($sku, $name, $price, $attributes = [], $stock=500) {
         ],
       ]
     ];
-    $array['product']['custom_attributes'] = []; 
+    $array['product']['custom_attributes'] = [];
 
     foreach ($attributes as $code => $value) {
-      $array['product']['custom_attributes'][] = ['attribute_code' => $code, 'value' => $value]; 
+      $array['product']['custom_attributes'][] = ['attribute_code' => $code, 'value' => $value];
     }
 
     $json = json_encode($array);
@@ -78,7 +78,7 @@ function product_json ($sku, $name, $price, $attributes = [], $stock=500) {
 }
 
 function image_json($img) {
-  
+
   $path = './images/'.$img;
   $type = pathinfo($path, PATHINFO_EXTENSION);
   $data = file_get_contents($path);
@@ -144,4 +144,3 @@ $image3 = image_json('img-2.png');
 $response = add_image($sku,$image);
 $response = add_image($sku,$image2);
 $response = add_image($sku,$image3);
-

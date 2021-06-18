@@ -1,7 +1,7 @@
 <?php
-const STORE_URL = "https://modelo.m2.jn2.store/";
-const USER = "jn2";
-const PASSWORD = "P4ssw0rd";
+const STORE_URL = "https://sualoja.com.br/";
+const USER = "user";
+const PASSWORD = "password";
 function get_json($parent, $name, $url=false) {
   if (!!$url) {
     return '{
@@ -15,7 +15,7 @@ function get_json($parent, $name, $url=false) {
           "value": "'.$url.'"
           }
           ]
-      } 
+      }
     }';
   } else {
     return '{
@@ -23,7 +23,7 @@ function get_json($parent, $name, $url=false) {
          "parent_id": '.$parent.',
          "name": "'.$name.'",
          "is_active": true
-      } 
+      }
     }';
   }
 }
@@ -40,7 +40,7 @@ function get_token() {
 }
 function get_category($name) {
   $token = get_token();
-  $request = STORE_URL."/rest/default/V1/categories";  
+  $request = STORE_URL."/rest/default/V1/categories";
   $ch = curl_init($request);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

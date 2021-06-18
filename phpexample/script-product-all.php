@@ -12,7 +12,7 @@ $name = 'Product-api-' . $count;
 
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://beta1.boostcommerce.com.br/rest/default/V1/products',
+  CURLOPT_URL => 'https://sualoja.com.br/rest/default/V1/products',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -32,7 +32,7 @@ curl_setopt_array($curl, array(
     \"weight\": \"0.5\",
     \"extension_attributes\": {
         \"category_links\": [
-           
+
             {
                 \"position\": 0,
                 \"category_id\": \"4\"
@@ -43,7 +43,7 @@ curl_setopt_array($curl, array(
             \"is_in_stock\": true
         }
     }
-    
+
   }
 }
 ",

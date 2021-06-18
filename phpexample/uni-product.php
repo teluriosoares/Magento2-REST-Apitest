@@ -7,7 +7,7 @@ $name = 'Produto-teste';
 
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://beta2.boostcommerce.com.br/rest/default/V1/products',
+  CURLOPT_URL => 'https://sualoja.com.br/rest/default/V1/products',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
